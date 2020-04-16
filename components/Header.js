@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 const Header = () => {
   const [headerClass, setHeaderClass] = useState("");
   const [changeLayanan, setLayanan] = useState(1);
+  const [active, setActive] = useState(false);
 
   // console.log(headerClass)
   const handleScroll = (e) => {
@@ -32,7 +33,7 @@ const Header = () => {
         ></meta>
         <link rel="icon" href="/asset/BKD_fix.png" />
       </Head>
-      <header id="header">
+      <header id="header" className={active ? "active" : ""}>
         <a href="#" className="logo">
           <img src="/asset/BKD_fix.png" />
         </a>
@@ -61,7 +62,7 @@ const Header = () => {
             </a>
           </li>
         </ul>
-        <div className="toggle"></div>
+        <div className="toggle" onClick={() => setActive(!active)}></div>
       </header>
 
       <style jsx>
@@ -76,23 +77,23 @@ const Header = () => {
             align-items: center;
             ${headerClass === "sticky"
               ? `
-            padding: 10px 80px;
+            padding: 10px 124px;
             background: #fff;
             border-bottom: 1px solid (0,0,0,.1);
             `
-              : `padding: 20px 50px;`}
+              : `padding: 20px 100px;`}
             z-index: 1000;
             transition: 0.6s;
           }
 
           .masuk img {
             position: relative;
-            height: 40px;
+            height: 76px;
             transition: 0.3s;
           }
 
           .masuk img:hover {
-            height: 44px;
+            height: 80px;
             transition: 0.3s;
           }
 
@@ -109,7 +110,7 @@ const Header = () => {
 
           header .logo img {
             position: relative;
-            ${headerClass === "sticky" ? `height: 64px; ` : `height: 72px;`}
+            ${headerClass === "sticky" ? `height: 116px; ` : `height: 124px;`}
             transition: 0.6s;
           }
 
@@ -134,7 +135,7 @@ const Header = () => {
             letter-spacing: 2px;
             font-weight: 300;
             transition: 0.6s;
-            font-size: 17px;
+            font-size: 32px;
           }
         `}
       </style>
@@ -173,6 +174,37 @@ const Header = () => {
               background: #000;
               z-index: 1;
               transition: 0.5s;
+            }
+            header {
+              padding: 5 50px;
+              background: #fff;
+            }
+            header ul {
+              position: absolute;
+              top: 59px;
+              left: 0;
+              width: 100%;
+              background: #fff;
+              height: 100vh;
+              text-align: center;
+              overflow: auto;
+              visibility: hidden;
+              opacity: 0;
+              transition: 0.6s;
+            }
+            header.active ul {
+              visibility: visible;
+              opacity: 1;
+              display: block;
+              padding-top: 20px;
+            }
+            header.active ul li a {
+              display: inline-block;
+              margin: 10px 0;
+            }
+            header.logo,
+            header ul li a {
+              color: #000;
             }
           }
         `}

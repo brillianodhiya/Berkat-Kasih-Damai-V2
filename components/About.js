@@ -206,16 +206,23 @@ const About = () => {
           }
           .content3 .content3_2 .banner-text3 h1 {
             font-weight: 500;
-            font-size: 28px;
+            font-size: 64px;
+          }
+          .content3 .content3_2 .banner-text3 p {
+            font-size: 32px;
           }
           .sec2 .content2 .banner-text2 {
             padding: 100px;
+
             ${hiroAnim === "sides" ? `width: 65%;` : `width: 40%;`}
             transition: 2s;
           }
           .sec2 .content2 .banner-text2 h1 {
             font-weight: 500;
-            font-size: 28px;
+            font-size: 64px;
+          }
+          .sec2 .content2 .banner-text2 p {
+            font-size: 32px;
           }
           .content2 .hiro-banner {
             width: 35%;
@@ -238,6 +245,12 @@ const About = () => {
             animation: spin 4s linear infinite;
             position: absolute;
           }
+          .open-donasi span {
+            width: 100%;
+          }
+          .open-donasi span img {
+            width: 18%;
+          }
           .open-donasi span p {
             position: absolute;
             text-decoration: none;
@@ -257,7 +270,7 @@ const About = () => {
             padding-top: 16px;
           }
           .open-donasi2 span img {
-            width: 40%;
+            width: 35%;
           }
           .sec2 .left-circle {
             position: absolute;

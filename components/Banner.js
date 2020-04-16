@@ -55,6 +55,7 @@ const Banner = () => {
             min-height: 110vh;
             display: flex;
             align-items: center;
+            padding-left: 120px;
           }
 
           .banner2 {
@@ -104,16 +105,21 @@ const Banner = () => {
 
           .banner .banner-text h1 {
             font-weight: 500;
-            font-size: 28px;
+            font-size: 64px;
+          }
+
+          .banner .banner-text p {
+            font-size: 32px;
           }
 
           .banner2 .square-path {
             position: absolute;
             width: 100%;
+            z-index: 1;
           }
 
           .banner .hiro-path {
-            width: 540px;
+            width: 50%;
             ${hiroAnim === "sides"
               ? `
             padding-top: 112px;
@@ -129,7 +135,7 @@ const Banner = () => {
 
           .banner .banner-text .dot-dot {
             position: absolute;
-            top: -220px;
+            top: -180px;
             left: 10px;
             z-index: -1;
             width: 110%;
@@ -143,19 +149,28 @@ const Banner = () => {
 
           .banner .path2 {
             position: absolute;
-            width: 200px;
+            height: 300px;
             top: 10px;
             right: 5px;
           }
 
           .banner .banner-text .daftar .daftarbutton {
             position: relative;
-            width: 224px;
+            height: 128px;
             transition: 0.3s;
           }
           .banner .banner-text .daftar .daftarbutton:hover {
-            width: 232px;
+            height: 132px;
             transition: 0.3s;
+          }
+        `}
+      </style>
+      <style jsx>
+        {`
+          @media (max-width: 992px) {
+            .banner .hiro-path {
+              display: none;
+            }
           }
         `}
       </style>

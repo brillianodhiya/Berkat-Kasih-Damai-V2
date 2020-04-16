@@ -12,7 +12,7 @@ const News = () => {
 
       <section className="berita" id="berita">
         <div className="title">
-          <h1>Berita</h1>
+          <h1>Galeri</h1>
         </div>{" "}
         <div className="container">
           <CardNews
@@ -31,6 +31,30 @@ const News = () => {
             bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
             kevin turducken."
           />{" "}
+          <CardNews
+            img={"/asset/news_3.jpeg"}
+            title="News 3"
+            subtitle="More Info About News"
+            desc="Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta
+          bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
+          kevin turducken."
+          />
+          <CardNews
+            img={"/asset/news_3.jpeg"}
+            title="News 3"
+            subtitle="More Info About News"
+            desc="Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta
+          bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
+          kevin turducken."
+          />
+          <CardNews
+            img={"/asset/news_3.jpeg"}
+            title="News 3"
+            subtitle="More Info About News"
+            desc="Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta
+          bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
+          kevin turducken."
+          />
           <CardNews
             img={"/asset/news_3.jpeg"}
             title="News 3"
@@ -61,7 +85,7 @@ const News = () => {
 
           .title h1 {
             font-weight: 500;
-            font-size: 28px;
+            font-size: 64px;
             width: 100%;
             text-align: center;
           }
@@ -75,7 +99,7 @@ const News = () => {
           .container {
             width: 100%;
             display: flex;
-            padding: 36px;
+            padding: 4%;
           }
         `}
       </style>
