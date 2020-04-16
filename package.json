@@ -1,14 +1,15 @@
 {
   "name": "next-with-antd",
   "version": "1.0.0",
-  "repository": "https://github.com/hanpama/next-with-antd",
   "description": "",
   "keywords": [],
   "author": "Max Choi",
   "scripts": {
     "dev": "next",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
     "build": "next build",
-    "start": "next start"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "ISC",
   "dependencies": {
