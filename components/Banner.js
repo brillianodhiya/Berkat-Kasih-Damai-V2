@@ -55,7 +55,6 @@ const Banner = () => {
             min-height: 110vh;
             display: flex;
             align-items: center;
-            padding-left: 120px;
           }
 
           .banner2 {
@@ -93,10 +92,10 @@ const Banner = () => {
             position: relative;
             ${hiroAnim === "sides"
               ? `
-            padding: 64px;
+            padding-left: 11%;
               `
               : `
-              padding: 48px;
+              padding-left: 10%;
             
               `}
             width: 748vh;
@@ -105,25 +104,24 @@ const Banner = () => {
 
           .banner .banner-text h1 {
             font-weight: 500;
-            font-size: 64px;
+            font-size: 36px;
           }
 
           .banner .banner-text p {
-            font-size: 32px;
+            font-size: 18px;
           }
 
           .banner2 .square-path {
             position: absolute;
             width: 100%;
-            z-index: 1;
           }
 
           .banner .hiro-path {
-            width: 50%;
+            width: 40%;
             ${hiroAnim === "sides"
               ? `
-            padding-top: 112px;
-            padding-right: 112px;
+            padding-top: 5%;
+            padding-right: 5%;
             `
               : `
             padding-top: 148px;
@@ -135,7 +133,7 @@ const Banner = () => {
 
           .banner .banner-text .dot-dot {
             position: absolute;
-            top: -180px;
+            top: -220px;
             left: 10px;
             z-index: -1;
             width: 110%;
@@ -149,18 +147,18 @@ const Banner = () => {
 
           .banner .path2 {
             position: absolute;
-            height: 300px;
+            width: 200px;
             top: 10px;
             right: 5px;
           }
 
           .banner .banner-text .daftar .daftarbutton {
             position: relative;
-            height: 128px;
+            width: 224px;
             transition: 0.3s;
           }
           .banner .banner-text .daftar .daftarbutton:hover {
-            height: 132px;
+            width: 232px;
             transition: 0.3s;
           }
         `}

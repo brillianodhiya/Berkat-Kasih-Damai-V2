@@ -44,30 +44,6 @@ const Testimonials = () => {
               <img src="/asset/user3.jpg" className="user" />
               <h3>John Doe</h3>
             </div>
-          </div>{" "}
-          <div className="box">
-            <div className="content">
-              <img src="/asset/img.png" className="quote" />
-              <p>
-                Ea labore et aliquip sint velit. Do nulla esse adipisicing
-                labore et ea sunt laborum fugiat voluptate ex deserunt
-                exercitation.
-              </p>
-              <img src="/asset/user3.jpg" className="user" />
-              <h3>John Doe</h3>
-            </div>
-          </div>{" "}
-          <div className="box">
-            <div className="content">
-              <img src="/asset/img.png" className="quote" />
-              <p>
-                Ea labore et aliquip sint velit. Do nulla esse adipisicing
-                labore et ea sunt laborum fugiat voluptate ex deserunt
-                exercitation.
-              </p>
-              <img src="/asset/user3.jpg" className="user" />
-              <h3>John Doe</h3>
-            </div>
           </div>
         </div>
       </section>
@@ -98,7 +74,7 @@ const Testimonials = () => {
 
           .title h1 {
             font-weight: 500;
-            font-size: 64px;
+            font-size: 28px;
             width: 100%;
             text-align: center;
           }
@@ -117,8 +93,8 @@ const Testimonials = () => {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 420px;
-            height: 720px;
+            width: 320px;
+            height: 420px;
             margin: 20px;
             background: #eff8ff;
           }
@@ -127,12 +103,11 @@ const Testimonials = () => {
             text-align: center;
           }
           .container2 .box .content .quote {
-            max-width: 64px;
+            max-width: 48px;
           }
           .container2 .box .content p {
             color: #617a8b;
             padding: 20px 0;
-            font-size: 24px;
           }
           .container2 .box .user {
             max-width: 72px;
@@ -141,7 +116,7 @@ const Testimonials = () => {
           .container2 .box .content h3 {
             color: #617a8b;
             text-transform: uppercase;
-            font-size: 32px;
+            font-size: 16px;
             letter-spacing: 1px;
             font-weight: 600;
           }

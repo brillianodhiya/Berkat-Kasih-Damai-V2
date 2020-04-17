@@ -16,12 +16,9 @@ const Daftar = () => {
       <section className="daftar">
         <div className="left-text">
           <h1>Daftar Komunitas Berkat Aksi Damai</h1>
-          <p>
-            Bergabunglah Bersama kami untuk meningkatkan jiwa sosial kita dengan
-            menanam rasa peduli, tulus, rela serta berhati mulia berbagi berkah
-            kesesama yang lemah dan orang yang hidupnya masih memiliki
-            kekurangan
-          </p>
+          Bergabunglah Bersama kami untuk meningkatkan jiwa sosial kita dengan
+          menanam rasa peduli, tulus, rela serta berhati mulia berbagi berkah
+          kesesama yang lemah dan orang yang hidupnya masih memiliki kekurangan
         </div>
         <div className="right-text">
           <a onClick={() => ShowModal(!modal)}>
@@ -43,22 +40,19 @@ const Daftar = () => {
         .left-text {
           width: 70%;
         }
-        .left-text p {
-          font-size: 32px;
-        }
         .left-text h1 {
           font-weight: 500;
-          font-size: 64px;
+          font-size: 28px;
         }
         .right-text {
-          padding: 32px;
+          padding: 24px;
         }
         .right-text img {
-          width: 450px;
+          width: 250px;
           transition: 0.6s;
         }
         .right-text img:hover {
-          width: 480px;
+          width: 280px;
           transition: 0.6s;
         }
         .modal {
@@ -89,7 +83,7 @@ const Daftar = () => {
           transition: 0.6s;
           color: #aaa;
           float: right;
-          font-size: 64px;
+          font-size: 28px;
           font-weight: bold;
         }
 

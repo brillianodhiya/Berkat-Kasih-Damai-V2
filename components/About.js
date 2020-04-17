@@ -13,7 +13,7 @@ const About = () => {
       setAnimation2("");
     }
     console.log(window.scrollY);
-    if (window.scrollY > 720) {
+    if (window.scrollY > 240) {
       // console.log("About", e);
       setHiroAnim("sides");
     } else {
@@ -28,12 +28,12 @@ const About = () => {
 
   return (
     <div>
-      <section className="sec">
+      {/* <section className="sec">
         <div className="content">
           <img className="layanan-detail" src="/asset/core_feature.png" />
         </div>
-      </section>
-      <section className="sec2" id="layanan1">
+      </section> */}
+      <section className="sec2" id="intro">
         <img className="left-circle" src="/asset/Illustration-1.png" />
         <div className="content2">
           <div className="banner-text2">
@@ -100,8 +100,12 @@ const About = () => {
           </div>
         </div>
       </section>
-      <style jsx global>
+      <style jsx>
         {`
+          h1 {
+            font-size: 36px;
+            font-weight: 500;
+          }
           @-moz-keyframes spin {
             100% {
               -moz-transform: rotate(360deg);
@@ -142,7 +146,6 @@ const About = () => {
             min-height: 100vh;
             justify-content: center;
             transition: 0.6s;
-            margin-top: 25%;
             align-items: center;
           }
           .sec2 .content2 {
@@ -206,23 +209,27 @@ const About = () => {
           }
           .content3 .content3_2 .banner-text3 h1 {
             font-weight: 500;
-            font-size: 64px;
+            font-size: 36px;
           }
           .content3 .content3_2 .banner-text3 p {
-            font-size: 32px;
+            font-size: 18px;
           }
           .sec2 .content2 .banner-text2 {
             padding: 100px;
-
-            ${hiroAnim === "sides" ? `width: 65%;` : `width: 40%;`}
+            ${hiroAnim === "sides"
+              ? `
+            width: 65%;`
+              : `
+              
+              width: 40%;`}
             transition: 2s;
           }
           .sec2 .content2 .banner-text2 h1 {
             font-weight: 500;
-            font-size: 64px;
+            font-size: 36px;
           }
           .sec2 .content2 .banner-text2 p {
-            font-size: 32px;
+            font-size: 18px;
           }
           .content2 .hiro-banner {
             width: 35%;
@@ -245,12 +252,6 @@ const About = () => {
             animation: spin 4s linear infinite;
             position: absolute;
           }
-          .open-donasi span {
-            width: 100%;
-          }
-          .open-donasi span img {
-            width: 18%;
-          }
           .open-donasi span p {
             position: absolute;
             text-decoration: none;
@@ -270,7 +271,7 @@ const About = () => {
             padding-top: 16px;
           }
           .open-donasi2 span img {
-            width: 35%;
+            width: 40%;
           }
           .sec2 .left-circle {
             position: absolute;

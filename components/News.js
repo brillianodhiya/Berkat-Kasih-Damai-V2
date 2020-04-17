@@ -1,18 +1,47 @@
 import CardNews from "./cardnews";
 import { useEffect, useState } from "react";
-import { Button } from "antd";
-import stylesheet from "antd/dist/antd.min.css";
-
-// import SlideNews from "./SlideNews";
+import SlideNews from "./SlideNews";
 
 const News = () => {
+  // const settings = {
+  //   dots: true,
+  //   infinite: false,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 4,
+  //   initialSlide: 0,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         infinite: true,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         initialSlide: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
   return (
     <div>
-      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-
       <section className="berita" id="berita">
         <div className="title">
-          <h1>Galeri</h1>
+          <h1>Berita</h1>
         </div>{" "}
         <div className="container">
           <CardNews
@@ -31,30 +60,6 @@ const News = () => {
             bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
             kevin turducken."
           />{" "}
-          <CardNews
-            img={"/asset/news_3.jpeg"}
-            title="News 3"
-            subtitle="More Info About News"
-            desc="Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta
-          bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
-          kevin turducken."
-          />
-          <CardNews
-            img={"/asset/news_3.jpeg"}
-            title="News 3"
-            subtitle="More Info About News"
-            desc="Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta
-          bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
-          kevin turducken."
-          />
-          <CardNews
-            img={"/asset/news_3.jpeg"}
-            title="News 3"
-            subtitle="More Info About News"
-            desc="Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta
-          bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
-          kevin turducken."
-          />
           <CardNews
             img={"/asset/news_3.jpeg"}
             title="News 3"
@@ -85,7 +90,7 @@ const News = () => {
 
           .title h1 {
             font-weight: 500;
-            font-size: 64px;
+            font-size: 28px;
             width: 100%;
             text-align: center;
           }
@@ -99,7 +104,7 @@ const News = () => {
           .container {
             width: 100%;
             display: flex;
-            padding: 4%;
+            padding: 36px;
           }
         `}
       </style>

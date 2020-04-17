@@ -42,16 +42,13 @@ const Header = () => {
             <a href="#home">Home</a>
           </li> */}
           <li>
-            <a href="#profil">Profil</a>
+            <a href="#intro">Intro</a>
           </li>
           <li>
-            <a href="#layanan1">Layanan</a>
+            <a href="#informasi">Informasi</a>
           </li>
           <li>
             <a href="#galeri">Galeri</a>
-          </li>
-          <li>
-            <a href="#berita">Berita</a>
           </li>
           <li>
             <a href="#testimoni">Testimoni</a>
@@ -77,23 +74,17 @@ const Header = () => {
             align-items: center;
             ${headerClass === "sticky"
               ? `
-            padding: 10px 124px;
+            padding: 2px 70px;
             background: #fff;
             border-bottom: 1px solid (0,0,0,.1);
             `
-              : `padding: 20px 100px;`}
+              : `padding: 20px 50px;`}
             z-index: 1000;
             transition: 0.6s;
           }
 
           .masuk img {
-            position: relative;
-            height: 76px;
-            transition: 0.3s;
-          }
-
-          .masuk img:hover {
-            height: 80px;
+            height: 40px;
             transition: 0.3s;
           }
 
@@ -110,7 +101,7 @@ const Header = () => {
 
           header .logo img {
             position: relative;
-            ${headerClass === "sticky" ? `height: 116px; ` : `height: 124px;`}
+            height: 72px;
             transition: 0.6s;
           }
 
@@ -119,7 +110,6 @@ const Header = () => {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-top: 15px;
           }
 
           header ul li {
@@ -132,10 +122,10 @@ const Header = () => {
             margin: 0 15px;
             text-decoration: none;
             color: #000;
+            font-size: 110%;
             letter-spacing: 2px;
             font-weight: 300;
             transition: 0.6s;
-            font-size: 32px;
           }
         `}
       </style>
@@ -147,6 +137,24 @@ const Header = () => {
           }
 
           @media (max-width: 992px) {
+            header .logo {
+              position: relative;
+              font-weight: 700;
+              color: #fff;
+              text-decoration: none;
+              font-size: 2em;
+              text-transformation: uppercase;
+              letter-spacing: 2px;
+              transition: 0.6s;
+              display: flex;
+              justify-content: center;
+            }
+
+            header .logo img {
+              height: 53px;
+              transition: 0.6s;
+            }
+
             .toggle {
               display: block;
               position: relative;
@@ -176,7 +184,7 @@ const Header = () => {
               transition: 0.5s;
             }
             header {
-              padding: 5 50px;
+              padding: 5px 50px !important;
               background: #fff;
             }
             header ul {
@@ -185,7 +193,7 @@ const Header = () => {
               left: 0;
               width: 100%;
               background: #fff;
-              height: 100vh;
+              height: ${active ? `100vh` : `0`};
               text-align: center;
               overflow: auto;
               visibility: hidden;
