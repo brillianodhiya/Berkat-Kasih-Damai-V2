@@ -49,6 +49,32 @@ const Banner = () => {
         <img className="center-square" src="/asset/Path_3549.png" />
       </section>
       {/* <section className="banner3"></section> */}
+      <style jsx>
+        {`
+          @media (max-width: 992px) {
+            .banner .hiro-path {
+              display: none;
+            }
+            .banner .hiro-path2 {
+              display: none;
+            }
+            .banner .banner-text {
+              position: relative;
+              padding: 14%;
+
+              width: 748vh;
+              transition: 0.6s;
+            }
+            .banner .banner-text .dot-dot {
+              position: absolute;
+              top: -30px;
+              left: 50px;
+              z-index: -1;
+              width: 110%;
+            }
+          }
+        `}
+      </style>
       <style jsx global>
         {`
           .banner {
@@ -173,38 +199,6 @@ const Banner = () => {
           .banner .banner-text .daftar .daftarbutton:hover {
             width: 232px;
             transition: 0.3s;
-          }
-        `}
-      </style>
-      <style jsx>
-        {`
-          @media (max-width: 992px) {
-            .banner .hiro-path {
-              display: none;
-            }
-            .banner .hiro-path2 {
-              display: none;
-            }
-            .banner .banner-text {
-              position: relative;
-              ${hiroAnim === "sides"
-                ? `
-              padding: 13%;
-                `
-                : `
-                padding: 14%;
-              
-                `}
-              width: 748vh;
-              transition: 0.6s;
-            }
-            .banner .banner-text .dot-dot {
-              position: absolute;
-              top: -30px;
-              left: 50px;
-              z-index: -1;
-              width: 110%;
-            }
           }
         `}
       </style>

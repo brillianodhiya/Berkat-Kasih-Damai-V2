@@ -124,7 +124,7 @@ const Header = () => {
             margin: 0 15px;
             text-decoration: none;
             color: #000;
-            font-size: 20px;
+            font-size: 30px;
             letter-spacing: 2px;
             font-weight: 300;
             transition: 0.6s;
