@@ -59,7 +59,7 @@ const Banner = () => {
               position: absolute;
               right: 5%;
               width: 50%;
-              top: 10%;
+              top: 15%;
               z-index: 2;
             }
             .banner .banner-text .dot-dot {
@@ -68,7 +68,7 @@ const Banner = () => {
             .banner .banner-text {
               position: relative;
               padding: 14%;
-
+              background: rgba(255, 255, 255, 0.7);
               width: 100%;
               transition: 0.6s;
             }
@@ -76,13 +76,13 @@ const Banner = () => {
               ${hiroAnim === `sides`
                 ? `
                 
-                width: 210px;
+                width: 110px;
                 `
                 : `
-                width: 200px;
+                width: 150px;
               
               `}
-              z-index: 5;
+              z-index: 10;
               left: 40%;
               transition: 0.6s;
               position: absolute;
@@ -90,7 +90,7 @@ const Banner = () => {
             .banner {
               position: relative;
               width: 100%;
-              min-height: 100vh !important;
+              min-height: 80vh !important;
               display: flex;
               overflow: hidden;
             }
@@ -100,7 +100,7 @@ const Banner = () => {
             }
             .banner .banner-text p {
               font-size: 100%;
-              font-weight: 100;
+              font-weight: 300;
             }
             .banner .banner-text .daftar .daftarbutton {
               position: relative;
@@ -160,13 +160,13 @@ const Banner = () => {
             position: relative;
             ${hiroAnim === "sides"
               ? `
-            padding-left: 13%;
+            padding-left: 12%;
               `
               : `
               padding-left: 11%;
             
               `}
-            width: 748vh;
+            width: 50vw;
             transition: 0.6s;
             z-index: 10;
           }
@@ -214,8 +214,9 @@ const Banner = () => {
             position: absolute;
             top: -20vw;
             left: 5vw;
-            z-index: -5;
+            z-index: -500;
             width: 110%;
+            display: ${hiroAnim === "sides" ? `none` : `block`};
           }
 
           .banner .path1 {

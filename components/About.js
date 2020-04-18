@@ -111,15 +111,60 @@ const About = () => {
               width: 100% !important;
               transition: 0.8s;
             }
+            .sec2 {
+              display: flex;
+              justify-content: center;
+              transition: 0.6s;
+              align-items: center;
+            }
+            h1 {
+              font-size: 34px !important;
+              font-weight: 500 !important;
+            }
+            p {
+              font-size: 100% !important;
+              font-weight: 300 !important;
+            }
+            .open-donasi span img {
+              width: 140px !important;
+            }
+            .sec2 .left-circle {
+              position: absolute;
+
+              -webkit-animation: spin 4s linear infinite !important;
+              -moz-animation: spin 4s linear infinite !important;
+              animation: spin 4s linear infinite !important;
+              width: 300px !important;
+              left: 0 !important;
+              z-index: 1;
+              transition: 2s;
+            }
+            .sec .content .layanan-detail {
+              position: absolute;
+              width: 100%;
+              z-index: 2;
+            }
+            @-moz-keyframes spin {
+              100% {
+                -moz-transform: rotate(360deg);
+              }
+            }
+            @-webkit-keyframes spin {
+              100% {
+                -webkit-transform: rotate(360deg);
+              }
+            }
+            @keyframes spin {
+              100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+              }
+            }
           }
         `}
       </style>
       <style jsx>
         {`
-          h1 {
-            font-size: 36px;
-            font-weight: 500;
-          }
           @-moz-keyframes spin {
             100% {
               -moz-transform: rotate(360deg);
@@ -197,7 +242,7 @@ const About = () => {
             position: absolute;
             z-index: -1;
             width: 40%;
-            right: -200px;
+            right: -20vw;
             -webkit-animation: spin 4s linear infinite;
             -moz-animation: spin 4s linear infinite;
             animation: spin 4s linear infinite;
@@ -215,7 +260,7 @@ const About = () => {
             z-index: -1;
           }
           .sec3 .content3 .content3_2 {
-            padding: 24px;
+            padding: 1vw;
             position: relative;
           }
           .content3 .content3_2 .banner-text3 {
@@ -223,10 +268,11 @@ const About = () => {
           }
           .content3 .content3_2 .banner-text3 h1 {
             font-weight: 500;
-            font-size: 36px;
+            font-size: 3vw;
           }
           .content3 .content3_2 .banner-text3 p {
-            font-size: 18px;
+            font-size: 1.4vw;
+            font-weight: 300;
           }
           .sec2 .content2 .banner-text2 {
             width: 65%;
@@ -237,15 +283,16 @@ const About = () => {
           }
           .sec2 .content2 .banner-text2 h1 {
             font-weight: 500;
-            font-size: 36px;
+            font-size: 3vw;
           }
           .sec2 .content2 .banner-text2 p {
-            font-size: 18px;
+            font-size: 1.4vw;
+            font-weight: 300;
           }
           .content2 .hiro-banner {
             width: 35%;
-            padding-right: 50px;
-            padding-top: 50px;
+            padding-right: 2vw;
+            padding-top: 2vw;
           }
           .content2 .hiro-banner span {
             width: 100%;
@@ -263,26 +310,42 @@ const About = () => {
             animation: spin 4s linear infinite;
             position: absolute;
           }
+          .open-donasi span {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            width: 11vw;
+          }
           .open-donasi span p {
             position: absolute;
             text-decoration: none;
             color: #fff;
             font-weight: 500;
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-top: 8px;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            padding-top: 0.2vw;
+          }
+          .open-donasi span img {
+            width: 100%;
+          }
+
+          .open-donasi2 span {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            width: 15vw;
+          }
+          .open-donasi2 span img {
+            width: 100%;
           }
           .open-donasi2 span p {
             position: absolute;
             text-decoration: none;
             color: #fff;
             font-weight: 500;
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-top: 16px;
-          }
-          .open-donasi2 span img {
-            width: 40%;
+            padding-left: 1.4vw;
+            padding-right: 1.4vw;
+            padding-top: 0.2vw;
           }
           .sec2 .left-circle {
             position: absolute;
@@ -293,7 +356,7 @@ const About = () => {
               -moz-animation: spin 4s linear infinite;
               animation: spin 4s linear infinite;
             width: 40%;
-            left: -200px;
+            left: -20vw;
               `
               : `
               width: 70%;
