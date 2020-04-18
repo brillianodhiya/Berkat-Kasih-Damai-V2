@@ -13,7 +13,7 @@ const About = () => {
       setAnimation2("");
     }
     console.log(window.scrollY);
-    if (window.scrollY > 240) {
+    if (window.scrollY > 110) {
       // console.log("About", e);
       setHiroAnim("sides");
     } else {
@@ -33,7 +33,7 @@ const About = () => {
           <img className="layanan-detail" src="/asset/core_feature.png" />
         </div>
       </section> */}
-      <section className="sec2" id="intro">
+      <section className="sec2" id="beranda">
         <img className="left-circle" src="/asset/Illustration-1.png" />
         <div className="content2">
           <div className="banner-text2">
@@ -61,7 +61,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="sec3" id="layanan2">
+      <section className="sec3" id="informasi">
         <div className="content3">
           <div className="content3_1">
             <span>
@@ -100,6 +100,20 @@ const About = () => {
           </div>
         </div>
       </section>
+      <style jsx>
+        {`
+          @media (max-width: 992px) {
+            .hiro-banner {
+              display: none;
+            }
+            .sec2 .content2 .banner-text2 {
+              padding: 10% !important;
+              width: 100% !important;
+              transition: 0.8s;
+            }
+          }
+        `}
+      </style>
       <style jsx>
         {`
           h1 {
@@ -159,7 +173,7 @@ const About = () => {
             display: flex;
             justify-content: center;
             transition: 0.6s;
-            min-height: 80vh;
+            min-height: 100vh;
           }
           .sec3 .content3 {
             width: 100%;
@@ -215,13 +229,10 @@ const About = () => {
             font-size: 18px;
           }
           .sec2 .content2 .banner-text2 {
-            padding: 100px;
-            ${hiroAnim === "sides"
-              ? `
-            width: 65%;`
-              : `
-              
-              width: 40%;`}
+            width: 65%;
+            padding-top: 5%;
+            padding-left: 11%;
+            ${hiroAnim === "sides" ? `opacity: 1` : `opacity: 0`}
             transition: 2s;
           }
           .sec2 .content2 .banner-text2 h1 {
@@ -278,18 +289,18 @@ const About = () => {
 
             ${hiroAnim === "sides"
               ? `
+              -webkit-animation: spin 4s linear infinite;
+              -moz-animation: spin 4s linear infinite;
+              animation: spin 4s linear infinite;
             width: 40%;
             left: -200px;
-            -webkit-animation: spin 4s linear infinite;
-            -moz-animation: spin 4s linear infinite;
-            animation: spin 4s linear infinite;
               `
               : `
-              width: 80%;
+              width: 70%;
 
             `}
             z-index: 1;
-            transition: 1s;
+            transition: 2s;
           }
           .sec .content .layanan-detail {
             position: absolute;

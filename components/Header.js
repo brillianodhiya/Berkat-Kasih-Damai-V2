@@ -42,7 +42,7 @@ const Header = () => {
             <a href="#home">Home</a>
           </li> */}
           <li>
-            <a href="#intro">Intro</a>
+            <a href="#beranda">Beranda</a>
           </li>
           <li>
             <a href="#informasi">Informasi</a>
@@ -74,17 +74,17 @@ const Header = () => {
             align-items: center;
             ${headerClass === "sticky"
               ? `
-            padding: 2px 70px;
+            padding: 5px 130px;
             background: #fff;
             border-bottom: 1px solid (0,0,0,.1);
             `
-              : `padding: 20px 50px;`}
+              : `padding: 20px 140px;`}
             z-index: 1000;
             transition: 0.6s;
           }
 
           .masuk img {
-            height: 40px;
+            height: 48px;
             transition: 0.3s;
           }
 
@@ -97,11 +97,13 @@ const Header = () => {
             text-transformation: uppercase;
             letter-spacing: 2px;
             transition: 0.6s;
+            display: flex;
+            justify-content: center;
           }
 
           header .logo img {
             position: relative;
-            height: 72px;
+            height: 76px;
             transition: 0.6s;
           }
 
@@ -122,7 +124,7 @@ const Header = () => {
             margin: 0 15px;
             text-decoration: none;
             color: #000;
-            font-size: 110%;
+            font-size: 20px;
             letter-spacing: 2px;
             font-weight: 300;
             transition: 0.6s;

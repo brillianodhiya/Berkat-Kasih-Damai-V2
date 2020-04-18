@@ -23,6 +23,8 @@ const Banner = () => {
     <div>
       <section className="banner">
         <div className="banner-text">
+          <img className="dot-dot" src="/asset/illustration.png" />
+
           <h1>
             Komunitas <br />
             Berkat Kasih Damai
@@ -35,11 +37,11 @@ const Banner = () => {
           <a className="daftar" href="#">
             <img className="daftarbutton" src="/asset/btn.png" />
           </a>
-          <img className="dot-dot" src="/asset/illustration.png" />
         </div>
         <img className="hiro-path" src="/asset/Group_1161.png" />
+        <img className="hiro-path2" src="/asset/Group_1161.png" />
         <br />
-        {/* <img className="path1" src="/asset/Path_3677.png" /> */}
+        <img className="path1" src="/asset/Path_3677.png" />
         <img className="path2" src="/asset/Path_3550.png" />
       </section>
       <section className="banner2" id="profil">
@@ -55,6 +57,7 @@ const Banner = () => {
             min-height: 110vh;
             display: flex;
             align-items: center;
+            overflow: hidden;
           }
 
           .banner2 {
@@ -92,10 +95,10 @@ const Banner = () => {
             position: relative;
             ${hiroAnim === "sides"
               ? `
-            padding-left: 11%;
+            padding-left: 13%;
               `
               : `
-              padding-left: 10%;
+              padding-left: 11%;
             
               `}
             width: 748vh;
@@ -104,7 +107,7 @@ const Banner = () => {
 
           .banner .banner-text h1 {
             font-weight: 500;
-            font-size: 36px;
+            font-size: 44px;
           }
 
           .banner .banner-text p {
@@ -117,24 +120,33 @@ const Banner = () => {
           }
 
           .banner .hiro-path {
-            width: 40%;
+            width: 50%;
+            opacity: 0;
             ${hiroAnim === "sides"
               ? `
             padding-top: 5%;
             padding-right: 5%;
             `
               : `
-            padding-top: 148px;
-            padding-right: 48px;
+            padding-top: 5%;
+            padding-right: 5%;
             `}
             z-index: -1;
             transition: 0.6s;
           }
 
+          .banner .hiro-path2 {
+            position: absolute;
+            right: 5%;
+            width: 50%;
+            top: 25%;
+            z-index: 2;
+          }
+
           .banner .banner-text .dot-dot {
             position: absolute;
-            top: -220px;
-            left: 10px;
+            top: -210px;
+            left: 80px;
             z-index: -1;
             width: 110%;
           }
@@ -147,9 +159,9 @@ const Banner = () => {
 
           .banner .path2 {
             position: absolute;
-            width: 200px;
-            top: 10px;
-            right: 5px;
+            width: 30%;
+            top: -15%;
+            right: -15%;
           }
 
           .banner .banner-text .daftar .daftarbutton {
@@ -168,6 +180,29 @@ const Banner = () => {
           @media (max-width: 992px) {
             .banner .hiro-path {
               display: none;
+            }
+            .banner .hiro-path2 {
+              display: none;
+            }
+            .banner .banner-text {
+              position: relative;
+              ${hiroAnim === "sides"
+                ? `
+              padding: 13%;
+                `
+                : `
+                padding: 14%;
+              
+                `}
+              width: 748vh;
+              transition: 0.6s;
+            }
+            .banner .banner-text .dot-dot {
+              position: absolute;
+              top: -30px;
+              left: 50px;
+              z-index: -1;
+              width: 110%;
             }
           }
         `}
