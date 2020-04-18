@@ -11,7 +11,7 @@ const Home = () => (
   <Layout>
     <style jsx global>
       {`
-        @import url("https://fonts.googleapis.com/css?family=Roboto");
+        @import url("https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700,800,900&display=swap");
 
         * {
           margin: 0;
