@@ -11,13 +11,13 @@ const Home = () => (
   <Layout>
     <style jsx global>
       {`
-        @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+        @import url("https://fonts.googleapis.com/css?family=Roboto");
 
         * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
-          font-family: "Poppins", sans-serif;
+          font-family: "Roboto";
         }
 
         body {

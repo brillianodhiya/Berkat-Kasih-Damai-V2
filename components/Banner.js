@@ -111,7 +111,8 @@ const Banner = () => {
           }
 
           .banner .banner-text p {
-            font-size: 18px;
+            font-size: 30px;
+            font-weight: 100;
           }
 
           .banner2 .square-path {
