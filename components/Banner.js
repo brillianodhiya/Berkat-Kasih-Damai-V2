@@ -129,6 +129,7 @@ const Banner = () => {
               `}
             width: 748vh;
             transition: 0.6s;
+            z-index: 10;
           }
 
           .banner .banner-text h1 {
