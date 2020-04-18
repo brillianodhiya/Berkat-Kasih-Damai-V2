@@ -18,6 +18,7 @@ const Home = () => (
           padding: 0;
           box-sizing: border-box;
           font-family: "Roboto";
+          color: #141640;
         }
 
         body {

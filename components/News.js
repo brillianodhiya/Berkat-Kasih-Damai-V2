@@ -41,9 +41,9 @@ const News = () => {
     <div>
       <section className="berita" id="berita">
         <div className="title">
-          <h1>Berita</h1>
+          <h1>Kegiatan Berkat Kasih Damai</h1>
         </div>{" "}
-        <div className="container">
+        {/* <div className="container">
           <CardNews
             img={"/asset/news_1.jpeg"}
             title="News 1"
@@ -68,7 +68,7 @@ const News = () => {
           bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
           kevin turducken."
           />
-        </div>
+        </div> */}
       </section>
       <style jsx>
         {`

@@ -53,24 +53,63 @@ const Banner = () => {
         {`
           @media (max-width: 992px) {
             .banner .hiro-path {
-              display: none;
+              display: none !important;
             }
             .banner .hiro-path2 {
-              display: none;
+              position: absolute;
+              right: 5%;
+              width: 50%;
+              top: 10%;
+              z-index: 2;
+            }
+            .banner .banner-text .dot-dot {
+              display: none !important;
             }
             .banner .banner-text {
               position: relative;
               padding: 14%;
 
-              width: 748vh;
+              width: 100%;
               transition: 0.6s;
             }
-            .banner .banner-text .dot-dot {
+            .banner2 .center-square {
+              ${hiroAnim === `sides`
+                ? `
+                
+                width: 210px;
+                `
+                : `
+                width: 200px;
+              
+              `}
+              z-index: 5;
+              left: 40%;
+              transition: 0.6s;
               position: absolute;
-              top: -30px;
-              left: 50px;
-              z-index: -1;
-              width: 110%;
+            }
+            .banner {
+              position: relative;
+              width: 100%;
+              min-height: 100vh !important;
+              display: flex;
+              overflow: hidden;
+            }
+            .banner .banner-text h1 {
+              font-weight: 500;
+              font-size: 34px;
+            }
+            .banner .banner-text p {
+              font-size: 100%;
+              font-weight: 100;
+            }
+            .banner .banner-text .daftar .daftarbutton {
+              position: relative;
+              width: 200px;
+              transition: 0.3s;
+            }
+            .banner .banner-text .daftar .daftarbutton:hover {
+              width: 210px;
+              transition: 0.3s;
             }
           }
         `}
@@ -80,7 +119,7 @@ const Banner = () => {
           .banner {
             position: relative;
             width: 100%;
-            min-height: 110vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -97,13 +136,13 @@ const Banner = () => {
             ${hiroAnim === `sides`
               ? `
               
-              width: 288px;
+              width: 20vw;
               `
               : `
-              width: 200px;
+              width: 19vw;
             
             `}
-            z-index: 1;
+            z-index: 5;
             left: 40%;
             transition: 0.6s;
             position: absolute;
@@ -134,11 +173,11 @@ const Banner = () => {
 
           .banner .banner-text h1 {
             font-weight: 500;
-            font-size: 44px;
+            font-size: 3vw;
           }
 
           .banner .banner-text p {
-            font-size: 30px;
+            font-size: 1.4vw;
             font-weight: 100;
           }
 
@@ -157,7 +196,7 @@ const Banner = () => {
             `
               : `
             padding-top: 5%;
-            padding-right: 5%;
+            padding-right: 30%;
             `}
             z-index: -1;
             transition: 0.6s;
@@ -173,16 +212,16 @@ const Banner = () => {
 
           .banner .banner-text .dot-dot {
             position: absolute;
-            top: -210px;
-            left: 80px;
-            z-index: -1;
+            top: -20vw;
+            left: 5vw;
+            z-index: -5;
             width: 110%;
           }
 
           .banner .path1 {
             position: absolute;
-            width: 120px;
-            top: 10px;
+            width: 10vw;
+            top: 1%;
           }
 
           .banner .path2 {
@@ -194,11 +233,11 @@ const Banner = () => {
 
           .banner .banner-text .daftar .daftarbutton {
             position: relative;
-            width: 224px;
+            width: 18vw;
             transition: 0.3s;
           }
           .banner .banner-text .daftar .daftarbutton:hover {
-            width: 232px;
+            width: 18.2vw;
             transition: 0.3s;
           }
         `}

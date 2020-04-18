@@ -9,6 +9,7 @@ const Header = () => {
   // console.log(headerClass)
   const handleScroll = (e) => {
     // console.log(e, "SCROLL");
+    setActive(false);
     if (window.scrollY > 0) {
       // console.log(window.scrollY);
       setHeaderClass("sticky");
@@ -42,16 +43,24 @@ const Header = () => {
             <a href="#home">Home</a>
           </li> */}
           <li>
-            <a href="#beranda">Beranda</a>
+            <a href="#beranda" onClick={() => setActive(false)}>
+              Beranda
+            </a>
           </li>
           <li>
-            <a href="#informasi">Informasi</a>
+            <a href="#informasi" onClick={() => setActive(false)}>
+              Informasi
+            </a>
           </li>
           <li>
-            <a href="#galeri">Galeri</a>
+            <a href="#galeri" onClick={() => setActive(false)}>
+              Galeri
+            </a>
           </li>
           <li>
-            <a href="#testimoni">Testimoni</a>
+            <a href="#testimoni" onClick={() => setActive(false)}>
+              Testimoni
+            </a>
           </li>
           <li>
             <a href="#masuk" className="masuk">
@@ -82,7 +91,7 @@ const Header = () => {
             }
 
             header .logo img {
-              height: 53px;
+              height: 44px;
               transition: 0.6s;
             }
 
@@ -115,8 +124,17 @@ const Header = () => {
               transition: 0.5s;
             }
             header {
-              padding: 5px 50px !important;
               background: #fff;
+              ${headerClass === "sticky"
+                ? `
+              padding: 5px 50px !important;
+
+            background: #fff;
+            border-bottom: 1px solid (0,0,0,.1);
+            `
+                : `
+              padding: 5px 50px !important;
+              `}
             }
             header ul {
               position: absolute;
@@ -129,6 +147,7 @@ const Header = () => {
               overflow: auto;
               visibility: hidden;
               opacity: 0;
+
               transition: 0.6s;
             }
             header.active ul {
@@ -145,6 +164,25 @@ const Header = () => {
             header ul li a {
               color: #000;
             }
+            header .logo img {
+              position: relative;
+              height: 52px !important;
+              transition: 0.6s;
+            }
+            .masuk img {
+              height: 40px !important;
+              transition: 0.3s;
+            }
+            header ul li a {
+              position: relative;
+              margin: 0 1vw;
+              text-decoration: none;
+              color: #000;
+              font-size: 18px;
+              letter-spacing: 0.2vw;
+              font-weight: 300;
+              transition: 0.6s;
+            }
           }
         `}
       </style>
@@ -160,17 +198,17 @@ const Header = () => {
             align-items: center;
             ${headerClass === "sticky"
               ? `
-            padding: 5px 130px;
+            padding: 0.5vw 10vw;
             background: #fff;
             border-bottom: 1px solid (0,0,0,.1);
             `
-              : `padding: 20px 140px;`}
+              : `padding: 1vw 12vw;`}
             z-index: 1000;
             transition: 0.6s;
           }
 
           .masuk img {
-            height: 48px;
+            height: 3vw;
             transition: 0.3s;
           }
 
@@ -189,7 +227,7 @@ const Header = () => {
 
           header .logo img {
             position: relative;
-            height: 76px;
+            height: 5vw;
             transition: 0.6s;
           }
 
@@ -207,11 +245,11 @@ const Header = () => {
 
           header ul li a {
             position: relative;
-            margin: 0 15px;
+            margin: 0 1vw;
             text-decoration: none;
             color: #000;
-            font-size: 30px;
-            letter-spacing: 2px;
+            font-size: 1.4vw;
+            letter-spacing: 0.2vw;
             font-weight: 300;
             transition: 0.6s;
           }
