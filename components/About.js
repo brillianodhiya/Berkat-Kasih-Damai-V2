@@ -106,7 +106,15 @@ const About = () => {
             .hiro-banner {
               display: none;
             }
+            .open-donasi2 span img {
+              width: 170px !important;
+            }
             .sec2 .content2 .banner-text2 {
+              padding: 10% !important;
+              width: 100% !important;
+              transition: 0.8s;
+            }
+            .banner-text3 {
               padding: 10% !important;
               width: 100% !important;
               transition: 0.8s;
@@ -125,9 +133,14 @@ const About = () => {
               font-size: 100% !important;
               font-weight: 300 !important;
             }
+            .open-donasi span p {
+              margin-left: 2vw;
+              margin-right: 2vw;
+            }
             .open-donasi span img {
               width: 140px !important;
             }
+
             .sec2 .left-circle {
               position: absolute;
 
@@ -144,6 +157,11 @@ const About = () => {
               width: 100%;
               z-index: 2;
             }
+            .content3_1 {
+              position: absolute !important;
+              right: 10px;
+            }
+
             @-moz-keyframes spin {
               100% {
                 -moz-transform: rotate(360deg);
