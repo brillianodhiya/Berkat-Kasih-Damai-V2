@@ -1,82 +1,171 @@
-import CardNews from "./cardnews";
 import { useEffect, useState } from "react";
-import SlideNews from "./SlideNews";
+import { List, Avatar, Icon } from "antd";
+import stylesheet from "antd/dist/antd.min.css";
 
 const News = () => {
-  // const settings = {
-  //   dots: true,
-  //   infinite: false,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 4,
-  //   initialSlide: 0,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 3,
-  //         infinite: true,
-  //         dots: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         initialSlide: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
+  const data = [
+    {
+      id: 1,
+      title: "Outbond Melewati Sungai",
+      desc:
+        "Kegiatan Traveling dengan keseruan menaiki mobil trail dan melewati sungai",
+      tag: "Mobil Trail",
+      img: "/asset/gallery3.jpeg",
+    },
+    {
+      id: 2,
+      title: "Foto Bersama",
+      desc: "Menyempatkan foto bersama untuk Berkat Kasih Damai",
+      tag: "Objek Wisata Batu Alien",
+      img: "/asset/gallery1.jpeg",
+    },
+    {
+      id: 3,
+      title: "Objek Wisata Omahku Memoriku",
+      desc:
+        "Didalamnya terdapat museum yang sangat menarik sebagai sarana belajar sejarah",
+      tag: "Mobil Trail",
+      img: "/asset/gallery2.jpeg",
+    },
+    {
+      id: 4,
+      title: "Outbond Melewati Sungai",
+      desc:
+        "Kegiatan Traveling dengan keseruan menaiki mobil trail dan melewati sungai",
+      tag: "Mobil Trail",
+      img: "/asset/gallery4.jpeg",
+    },
+    {
+      id: 5,
+      title: "Foto Bersama",
+      desc: "Menyempatkan foto bersama untuk Berkat Kasih Damai",
+      tag: "Objek Wisata Batu Alien",
+      img: "/asset/gallery5.jpeg",
+    },
+    {
+      id: 6,
+      title: "Objek Wisata Omahku Memoriku",
+      desc:
+        "Didalamnya terdapat museum yang sangat menarik sebagai sarana belajar sejarah",
+      tag: "Mobil Trail",
+      img: "/asset/gallery6.jpeg",
+    },
+  ];
   return (
     <div>
-      <section className="berita" id="berita">
+      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+
+      <section className="berita" id="galeri">
         <div className="title">
           <h1>Kegiatan Berkat Kasih Damai</h1>
         </div>{" "}
-        {/* <div className="container">
-          <CardNews
-            img={"/asset/news_1.jpeg"}
-            title="News 1"
-            subtitle="More Info About News"
-            desc="Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta
-            bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
-            kevin turducken."
+        <p className="subtitle">
+          Foto dokumentasi keseruan teman - teman ketika waktu Traveling
+        </p>
+        <div className="content-galery">
+          <List
+            itemLayout="vertical"
+            size="small"
+            pagination={{
+              onChange: (page) => {
+                console.log(page);
+              },
+              pageSize: 3,
+              size: "small",
+            }}
+            dataSource={data}
+            renderItem={(item, index) => {
+              if (index % 2 === 0) {
+                return (
+                  <List.Item
+                    className="list-gallery"
+                    key={item.id}
+                    extra={<img width={272} alt="logo" src={item.img} />}
+                  >
+                    <List.Item.Meta
+                      title={
+                        <a href="#">
+                          <h1>{item.title}</h1>
+                        </a>
+                      }
+                      description={
+                        <p>
+                          {item.desc} <br /> # {item.tag}
+                        </p>
+                      }
+                    />
+                  </List.Item>
+                );
+              } else {
+                return (
+                  <List.Item
+                    key={item.id}
+                    extra={<img width={272} alt="logo" src={item.img} />}
+                  >
+                    <List.Item.Meta
+                      title={
+                        <a href="#">
+                          <h2>{item.title}</h2>
+                        </a>
+                      }
+                      description={
+                        <p>
+                          {item.desc} <br /> # {item.tag}
+                        </p>
+                      }
+                    />
+                  </List.Item>
+                );
+              }
+            }}
           />
-          <CardNews
-            img={"/asset/news_2.jpeg"}
-            title="News 2"
-            subtitle="More Info About News"
-            desc="Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta
-            bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
-            kevin turducken."
-          />{" "}
-          <CardNews
-            img={"/asset/news_3.jpeg"}
-            title="News 3"
-            subtitle="More Info About News"
-            desc="Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta
-          bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto
-          kevin turducken."
-          />
-        </div> */}
+        </div>
       </section>
       <style jsx>
         {`
+          @media (max-width: 992px) {
+            .berita {
+              padding: 10% !important;
+              width: 100% !important;
+            }
+            h1 {
+              text-align: left !important;
+              font-size: 34px !important;
+              font-weight: 500 !important;
+            }
+            p {
+              text-align: left !important;
+              font-size: 100% !important;
+            }
+            .berita .title {
+              padding-top: 0 !important;
+              padding-bottom: 0 !important;
+            }
+          }
+        `}
+      </style>
+      <style jsx>
+        {`
+          .list-gallery div.ant-list-item-main {
+            order: 2 !important;
+          }
+          .list-gallery div.ant-list-item-extra {
+            order: 1 !important;
+          }
+          .content-galery {
+            padding-left: 11%;
+            padding-right: 11%;
+            padding-top: 8vh;
+          }
           .berita {
             position: relative;
             width: 100%;
-            min-height: 60vh;
-            background: #eef9ff;
+            min-height: 100vh;
+          }
+
+          .berita .subtitle {
+            text-align: center;
+            font-size: 1.4vw;
           }
 
           .title {
@@ -84,13 +173,12 @@ const News = () => {
             align-items: center;
             width: 100%;
             align-contents: center;
-            padding-top: 24px;
-            padding-bottom: 36px;
+            padding-bottom: 5vh;
           }
 
           .title h1 {
             font-weight: 500;
-            font-size: 28px;
+            font-size: 3vw;
             width: 100%;
             text-align: center;
           }

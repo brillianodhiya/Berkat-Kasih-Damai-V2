@@ -1,7 +1,22 @@
 import { useState, useEffect } from "react";
+import { Modal, Form, Input, Button, Checkbox, DatePicker } from "antd";
+import stylesheet from "antd/dist/antd.min.css";
+
+const layout = {
+  labelCol: { span: 8 },
+  wrapperCol: { span: 10 },
+};
+const tailLayout = {
+  wrapperCol: { offset: 8, span: 16 },
+};
+
+const config = {
+  rules: [{ type: "object", required: true, message: "Please select time!" }],
+};
 
 const Banner = () => {
   const [hiroAnim, setHiroAnim] = useState("");
+  const [regisModal, setRegisModal] = useState(false);
 
   const handleScroll = (e) => {
     // console.log(window.scrollY);
@@ -19,8 +34,80 @@ const Banner = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
+  const onFinish = (values) => {
+    console.log("Success:", values);
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+
   return (
     <div>
+      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+      <Modal
+        visible={regisModal}
+        title="Form Daftar"
+        footer={null}
+        onCancel={(e) => setRegisModal(false)}
+      >
+        <Form
+          {...layout}
+          name="basic"
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+        >
+          <Form.Item
+            name="nama"
+            label="Nama"
+            rules={[
+              {
+                required: true,
+                message: "Isikan nama anda!",
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name="email"
+            label="E-mail"
+            rules={[
+              {
+                type: "email",
+                message: "Format Email tidak sesuai!",
+              },
+              {
+                required: true,
+                message: "Tolong isikan Email!",
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[{ required: true, message: "Tolong isikan password!" }]}
+          >
+            <Input.Password />
+          </Form.Item>
+          <Form.Item name="date-picker" label="DatePicker" {...config}>
+            <DatePicker />
+          </Form.Item>
+          {/* <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+            <Checkbox>Remember me</Checkbox>
+          </Form.Item> */}
+
+          <Form.Item {...tailLayout}>
+            <Button type="primary" htmlType="submit">
+              <span style={{ color: "#fff" }}>Daftar</span>
+            </Button>
+          </Form.Item>
+        </Form>
+      </Modal>
       <section className="banner">
         <div className="banner-text">
           <img className="dot-dot" src="/asset/illustration.png" />
@@ -34,7 +121,7 @@ const Banner = () => {
             dan suka membantu untuk pertumbuhan pariwisata di tanah air
           </p>
           <br />
-          <a className="daftar" href="#">
+          <a className="daftar" onClick={() => setRegisModal(true)}>
             <img className="daftarbutton" src="/asset/btn.png" />
           </a>
         </div>
@@ -100,7 +187,6 @@ const Banner = () => {
             }
             .banner .banner-text p {
               font-size: 100%;
-              font-weight: 300;
             }
             .banner .banner-text .daftar .daftarbutton {
               position: relative;
@@ -178,7 +264,6 @@ const Banner = () => {
 
           .banner .banner-text p {
             font-size: 1.4vw;
-            font-weight: 100;
           }
 
           .banner2 .square-path {

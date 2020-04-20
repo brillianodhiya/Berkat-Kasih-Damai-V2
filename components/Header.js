@@ -1,10 +1,21 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
+import { Modal, Form, Input, Button, Checkbox } from "antd";
+import stylesheet from "antd/dist/antd.min.css";
+
+const layout = {
+  labelCol: { span: 8 },
+  wrapperCol: { span: 10 },
+};
+const tailLayout = {
+  wrapperCol: { offset: 8, span: 16 },
+};
 
 const Header = () => {
   const [headerClass, setHeaderClass] = useState("");
   const [changeLayanan, setLayanan] = useState(1);
   const [active, setActive] = useState(false);
+  const [modalMasuk, setModalMasuk] = useState(false);
 
   // console.log(headerClass)
   const handleScroll = (e) => {
@@ -23,8 +34,69 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
+  const onFinish = (values) => {
+    console.log("Success:", values);
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+  // const [form] = Form.useForm();
   return (
     <div>
+      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+
+      <Modal
+        visible={modalMasuk}
+        title="Form Masuk"
+        onCancel={(e) => {
+          setModalMasuk(false);
+        }}
+        footer={null}
+      >
+        <Form
+          {...layout}
+          name="basic"
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+        >
+          <Form.Item
+            name="email"
+            label="E-mail"
+            rules={[
+              {
+                type: "email",
+                message: "Format Email tidak sesuai!",
+              },
+              {
+                required: true,
+                message: "Tolong isikan Email!",
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[{ required: true, message: "Tolong isikan password!" }]}
+          >
+            <Input.Password />
+          </Form.Item>
+
+          {/* <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+            <Checkbox>Remember me</Checkbox>
+          </Form.Item> */}
+
+          <Form.Item {...tailLayout}>
+            <Button type="primary" htmlType="submit">
+              <span style={{ color: "#fff" }}>Masuk</span>
+            </Button>
+          </Form.Item>
+        </Form>
+      </Modal>
       <Head>
         <title>Berkat Kasih Damai</title>
         <meta
@@ -63,7 +135,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#masuk" className="masuk">
+            <a className="masuk" onClick={() => setModalMasuk(true)}>
               <img src="/asset/Group_1164.png" />
             </a>
           </li>

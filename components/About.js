@@ -131,11 +131,10 @@ const About = () => {
             }
             p {
               font-size: 100% !important;
-              font-weight: 300 !important;
             }
             .open-donasi span p {
-              margin-left: 2vw;
-              margin-right: 2vw;
+              margin-left: 3vw;
+              margin-right: 3vw;
             }
             .open-donasi span img {
               width: 140px !important;
@@ -290,7 +289,6 @@ const About = () => {
           }
           .content3 .content3_2 .banner-text3 p {
             font-size: 1.4vw;
-            font-weight: 300;
           }
           .sec2 .content2 .banner-text2 {
             width: 65%;
@@ -305,7 +303,6 @@ const About = () => {
           }
           .sec2 .content2 .banner-text2 p {
             font-size: 1.4vw;
-            font-weight: 300;
           }
           .content2 .hiro-banner {
             width: 35%;
