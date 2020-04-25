@@ -62,7 +62,7 @@ const Footer = () => {
             width: 100%;
             min-height: 50vh;
             display: flex;
-            margin-top: 36px;
+            margin-top: 3.6vw;
           }
           footer .bg {
             width: 100%;

@@ -80,16 +80,22 @@ const News = () => {
                   <List.Item
                     className="list-gallery"
                     key={item.id}
-                    extra={<img width={272} alt="logo" src={item.img} />}
+                    extra={
+                      <img
+                        style={{ width: "20vw" }}
+                        alt="logo"
+                        src={item.img}
+                      />
+                    }
                   >
                     <List.Item.Meta
                       title={
-                        <a href="#">
+                        <a href="#" style={{ fontSize: "1.2vw" }}>
                           <h1>{item.title}</h1>
                         </a>
                       }
                       description={
-                        <p>
+                        <p style={{ fontSize: "1vw", lineHeight: "5vh" }}>
                           {item.desc} <br /> # {item.tag}
                         </p>
                       }
@@ -100,16 +106,22 @@ const News = () => {
                 return (
                   <List.Item
                     key={item.id}
-                    extra={<img width={272} alt="logo" src={item.img} />}
+                    extra={
+                      <img
+                        style={{ width: "20vw" }}
+                        alt="logo"
+                        src={item.img}
+                      />
+                    }
                   >
                     <List.Item.Meta
                       title={
-                        <a href="#">
+                        <a href="#" style={{ fontSize: "1.2vw" }}>
                           <h2>{item.title}</h2>
                         </a>
                       }
                       description={
-                        <p>
+                        <p style={{ fontSize: "1vw", lineHeight: "5vh" }}>
                           {item.desc} <br /> # {item.tag}
                         </p>
                       }
@@ -146,12 +158,6 @@ const News = () => {
       </style>
       <style jsx>
         {`
-          .list-gallery div.ant-list-item-main {
-            order: 2 !important;
-          }
-          .list-gallery div.ant-list-item-extra {
-            order: 1 !important;
-          }
           .content-galery {
             padding-left: 11%;
             padding-right: 11%;

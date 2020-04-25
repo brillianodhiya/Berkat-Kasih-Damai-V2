@@ -28,6 +28,27 @@ const Home = () => (
         html {
           scroll-behavior: smooth;
         }
+
+        .ant-modal {
+          width: 50vw !important;
+        }
+        .list-gallery .ant-list-item-main {
+          order: 2 !important;
+        }
+        .list-gallery .ant-list-item-extra {
+          order: 1 !important;
+          margin-right: 40px !important;
+          margin-left: 0 !important;
+        }
+        @media (max-width: 992px) {
+          .list-gallery .ant-list-item-main {
+            order: 1 !important;
+          }
+          .list-gallery .ant-list-item-extra {
+            order: 2 !important;
+            margin-left: 40px !important;
+          }
+        }
       `}
     </style>
     <Header />

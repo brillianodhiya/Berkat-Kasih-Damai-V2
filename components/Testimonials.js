@@ -69,12 +69,12 @@ const Testimonials = () => {
             align-items: center;
             width: 100%;
             align-contents: center;
-            padding-top: 24px;
+            padding-top: 2vh;
           }
 
           .title h1 {
             font-weight: 500;
-            font-size: 28px;
+            font-size: 3vw;
             width: 100%;
             text-align: center;
           }
@@ -86,38 +86,39 @@ const Testimonials = () => {
             justify-content: space-between;
             align-items: center;
             flex-warp: wrap;
-            margin: 20px;
+            margin: 2.2vw;
           }
           .container2 .box {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 320px;
-            height: 420px;
-            margin: 20px;
+            width: 25vw;
+            height: 32vw;
+            margin: 2vw;
             background: #eff8ff;
           }
           .container2 .box .content {
-            padding: 30px;
+            padding: 2.5vw;
             text-align: center;
           }
           .container2 .box .content .quote {
-            max-width: 48px;
+            max-width: 4vw;
           }
           .container2 .box .content p {
             color: #617a8b;
-            padding: 20px 0;
+            padding: 2vw 0;
+            font-size: 1.2vw;
           }
           .container2 .box .user {
-            max-width: 72px;
+            max-width: 7vw;
             border-radius: 50%;
           }
           .container2 .box .content h3 {
             color: #617a8b;
             text-transform: uppercase;
-            font-size: 16px;
-            letter-spacing: 1px;
+            font-size: 1.3vw;
+            letter-spacing: 0.1vw;
             font-weight: 600;
           }
           @media (max-width: 1050px) {

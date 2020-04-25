@@ -49,11 +49,13 @@ const Banner = () => {
         visible={regisModal}
         title="Form Daftar"
         footer={null}
+        width={1200}
         onCancel={(e) => setRegisModal(false)}
       >
         <Form
           {...layout}
           name="basic"
+          size="large"
           initialValues={{ remember: true }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
@@ -68,7 +70,7 @@ const Banner = () => {
               },
             ]}
           >
-            <Input />
+            <Input size="large" />
           </Form.Item>
           <Form.Item
             name="email"
@@ -84,7 +86,7 @@ const Banner = () => {
               },
             ]}
           >
-            <Input />
+            <Input size="large" />
           </Form.Item>
 
           <Form.Item
@@ -95,7 +97,7 @@ const Banner = () => {
             <Input.Password />
           </Form.Item>
           <Form.Item name="date-picker" label="DatePicker" {...config}>
-            <DatePicker />
+            <DatePicker size="large" />
           </Form.Item>
           {/* <Form.Item {...tailLayout} name="remember" valuePropName="checked">
             <Checkbox>Remember me</Checkbox>

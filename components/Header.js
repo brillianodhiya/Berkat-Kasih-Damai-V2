@@ -52,6 +52,7 @@ const Header = () => {
         onCancel={(e) => {
           setModalMasuk(false);
         }}
+        width={1200}
         footer={null}
       >
         <Form
@@ -59,6 +60,7 @@ const Header = () => {
           name="basic"
           initialValues={{ remember: true }}
           onFinish={onFinish}
+          size="large"
           onFinishFailed={onFinishFailed}
         >
           <Form.Item
@@ -75,7 +77,7 @@ const Header = () => {
               },
             ]}
           >
-            <Input />
+            <Input size="large" />
           </Form.Item>
 
           <Form.Item
@@ -83,7 +85,7 @@ const Header = () => {
             name="password"
             rules={[{ required: true, message: "Tolong isikan password!" }]}
           >
-            <Input.Password />
+            <Input.Password size="large" />
           </Form.Item>
 
           {/* <Form.Item {...tailLayout} name="remember" valuePropName="checked">

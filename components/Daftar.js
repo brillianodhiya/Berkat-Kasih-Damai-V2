@@ -34,25 +34,26 @@ const Daftar = () => {
           min-height: 60vh;
           display: flex;
           align-items: center;
-          padding-left: 116px;
-          padding-right: 116px;
+          padding-left: 11.6vw;
+          padding-right: 11.6vw;
         }
         .left-text {
           width: 70%;
+          font-size: 1.4vw;
         }
         .left-text h1 {
           font-weight: 500;
-          font-size: 28px;
+          font-size: 3vw;
         }
         .right-text {
-          padding: 24px;
+          padding: 2.4vw;
         }
         .right-text img {
-          width: 250px;
+          width: 20vw;
           transition: 0.6s;
         }
         .right-text img:hover {
-          width: 280px;
+          width: 20.1vw;
           transition: 0.6s;
         }
         .modal {
