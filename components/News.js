@@ -27,29 +27,29 @@ const News = () => {
       tag: "Mobil Trail",
       img: "/asset/gallery2.jpeg",
     },
-    {
-      id: 4,
-      title: "Outbond Melewati Sungai",
-      desc:
-        "Kegiatan Traveling dengan keseruan menaiki mobil trail dan melewati sungai",
-      tag: "Mobil Trail",
-      img: "/asset/gallery4.jpeg",
-    },
-    {
-      id: 5,
-      title: "Foto Bersama",
-      desc: "Menyempatkan foto bersama untuk Berkat Kasih Damai",
-      tag: "Objek Wisata Batu Alien",
-      img: "/asset/gallery5.jpeg",
-    },
-    {
-      id: 6,
-      title: "Objek Wisata Omahku Memoriku",
-      desc:
-        "Didalamnya terdapat museum yang sangat menarik sebagai sarana belajar sejarah",
-      tag: "Mobil Trail",
-      img: "/asset/gallery6.jpeg",
-    },
+    // {
+    //   id: 4,
+    //   title: "Outbond Melewati Sungai",
+    //   desc:
+    //     "Kegiatan Traveling dengan keseruan menaiki mobil trail dan melewati sungai",
+    //   tag: "Mobil Trail",
+    //   img: "/asset/gallery4.jpeg",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Foto Bersama",
+    //   desc: "Menyempatkan foto bersama untuk Berkat Kasih Damai",
+    //   tag: "Objek Wisata Batu Alien",
+    //   img: "/asset/gallery5.jpeg",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Objek Wisata Omahku Memoriku",
+    //   desc:
+    //     "Didalamnya terdapat museum yang sangat menarik sebagai sarana belajar sejarah",
+    //   tag: "Mobil Trail",
+    //   img: "/asset/gallery6.jpeg",
+    // },
   ];
   return (
     <div>
@@ -66,13 +66,14 @@ const News = () => {
           <List
             itemLayout="vertical"
             size="small"
-            pagination={{
-              onChange: (page) => {
-                console.log(page);
-              },
-              pageSize: 3,
-              size: "small",
-            }}
+            pagination={false}
+            // pagination={{
+            //   onChange: (page) => {
+            //     console.log(page);
+            //   },
+            //   pageSize: 3,
+            //   size: "small",
+            // }}
             dataSource={data}
             renderItem={(item, index) => {
               if (index % 2 === 0) {
@@ -81,21 +82,17 @@ const News = () => {
                     className="list-gallery"
                     key={item.id}
                     extra={
-                      <img
-                        style={{ width: "20vw" }}
-                        alt="logo"
-                        src={item.img}
-                      />
+                      <img className="img-logo" alt="logo" src={item.img} />
                     }
                   >
                     <List.Item.Meta
                       title={
-                        <a href="#" style={{ fontSize: "1.2vw" }}>
-                          <h1>{item.title}</h1>
+                        <a href="#">
+                          <h2>{item.title}</h2>
                         </a>
                       }
                       description={
-                        <p style={{ fontSize: "1vw", lineHeight: "5vh" }}>
+                        <p>
                           {item.desc} <br /> # {item.tag}
                         </p>
                       }
@@ -107,21 +104,17 @@ const News = () => {
                   <List.Item
                     key={item.id}
                     extra={
-                      <img
-                        style={{ width: "20vw" }}
-                        alt="logo"
-                        src={item.img}
-                      />
+                      <img className="img-logo" alt="logo" src={item.img} />
                     }
                   >
                     <List.Item.Meta
                       title={
-                        <a href="#" style={{ fontSize: "1.2vw" }}>
+                        <a href="#">
                           <h2>{item.title}</h2>
                         </a>
                       }
                       description={
-                        <p style={{ fontSize: "1vw", lineHeight: "5vh" }}>
+                        <p>
                           {item.desc} <br /> # {item.tag}
                         </p>
                       }
@@ -140,6 +133,9 @@ const News = () => {
               padding: 10% !important;
               width: 100% !important;
             }
+            .img-logo {
+              width: 200px !important;
+            }
             h1 {
               text-align: left !important;
               font-size: 34px !important;
@@ -153,11 +149,20 @@ const News = () => {
               padding-top: 0 !important;
               padding-bottom: 0 !important;
             }
+            h2 {
+              font-size: 100% !important;
+            }
           }
         `}
       </style>
       <style jsx>
         {`
+          .img-logo {
+            width: 20vw;
+          }
+          h2 {
+            font-size: 1.2vw;
+          }
           .content-galery {
             padding-left: 11%;
             padding-right: 11%;
@@ -175,14 +180,15 @@ const News = () => {
           }
 
           .title {
+            padding-top: 5vw;
             display: flex;
             align-items: center;
             width: 100%;
             align-contents: center;
-            padding-bottom: 5vh;
           }
 
           .title h1 {
+            margin: 0;
             font-weight: 500;
             font-size: 3vw;
             width: 100%;

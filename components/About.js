@@ -33,7 +33,7 @@ const About = () => {
           <img className="layanan-detail" src="/asset/core_feature.png" />
         </div>
       </section> */}
-      <section className="sec2" id="beranda">
+      <section className="sec2" id="informasi">
         <img className="left-circle" src="/asset/Illustration-1.png" />
         <div className="content2">
           <div className="banner-text2">
@@ -61,7 +61,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="sec3" id="informasi">
+      <section className="sec3" style={{ background: "#F9F9F9" }}>
         <div className="content3">
           <div className="content3_1">
             <span>
@@ -236,6 +236,7 @@ const About = () => {
             justify-content: center;
             transition: 0.6s;
             min-height: 100vh;
+            align-items: center;
           }
           .sec3 .content3 {
             width: 100%;

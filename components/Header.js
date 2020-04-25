@@ -276,8 +276,10 @@ const Header = () => {
             background: #fff;
             border-bottom: 1px solid (0,0,0,.1);
             `
-              : `padding: 1vw 12vw;`}
+              : `padding: 0.5vw 12vw;`}
             z-index: 1000;
+            background: #fff;
+
             transition: 0.6s;
           }
 
@@ -310,6 +312,7 @@ const Header = () => {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 1vw;
           }
 
           header ul li {

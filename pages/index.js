@@ -21,10 +21,6 @@ const Home = () => (
           color: #141640;
         }
 
-        body {
-          min-height: 1000px;
-        }
-
         html {
           scroll-behavior: smooth;
         }
@@ -40,6 +36,10 @@ const Home = () => (
           margin-right: 40px !important;
           margin-left: 0 !important;
         }
+        .ant-list-vertical .ant-list-item-main {
+          margin-left: 8vw;
+          margin-top: 3vw;
+        }
         @media (max-width: 992px) {
           .list-gallery .ant-list-item-main {
             order: 1 !important;
@@ -47,6 +47,10 @@ const Home = () => (
           .list-gallery .ant-list-item-extra {
             order: 2 !important;
             margin-left: 40px !important;
+          }
+          .ant-list-vertical .ant-list-item-main {
+            margin-left: 0;
+            margin-top: 0;
           }
         }
       `}

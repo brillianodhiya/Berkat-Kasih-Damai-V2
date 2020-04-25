@@ -100,8 +100,7 @@ const Banner = () => {
             <DatePicker size="large" />
           </Form.Item>
           {/* <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item> */}
+            </Form.Item> */}
 
           <Form.Item {...tailLayout}>
             <Button type="primary" htmlType="submit">
@@ -110,19 +109,19 @@ const Banner = () => {
           </Form.Item>
         </Form>
       </Modal>
-      <section className="banner">
+      <section
+        className="banner"
+        id="beranda"
+        style={{ background: "#F9F9F9" }}
+      >
         <div className="banner-text">
           <img className="dot-dot" src="/asset/illustration.png" />
 
-          <h1>
+          <h1 style={{ margin: 0 }}>
             Komunitas <br />
             Berkat Kasih Damai
           </h1>
-          <p>
-            Komunitas yang mewadahi orang-orang yang gemar melakukan traveling
-            dan suka membantu untuk pertumbuhan pariwisata di tanah air
-          </p>
-          <br />
+          <p style={{ color: "#B1EA8C" }}>#Give Your Love With The World</p>
           <a className="daftar" onClick={() => setRegisModal(true)}>
             <img className="daftarbutton" src="/asset/btn.png" />
           </a>

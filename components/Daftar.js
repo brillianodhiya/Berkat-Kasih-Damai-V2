@@ -1,13 +1,101 @@
 import { useState } from "react";
+import { Modal, Form, Input, Button, Checkbox, DatePicker } from "antd";
+import stylesheet from "antd/dist/antd.min.css";
+
+const layout = {
+  labelCol: { span: 8 },
+  wrapperCol: { span: 10 },
+};
+const tailLayout = {
+  wrapperCol: { offset: 8, span: 16 },
+};
+
+const config = {
+  rules: [{ type: "object", required: true, message: "Please select time!" }],
+};
 
 const Daftar = () => {
   const [modal, ShowModal] = React.useState(false);
+  const [regisModal, setRegisModal] = useState(false);
+
+  const onFinish = (values) => {
+    console.log("Success:", values);
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
   return (
     <div>
       {/* <Button>TESTT</Button> */}
+      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+      <Modal
+        visible={regisModal}
+        title="Form Daftar"
+        footer={null}
+        width={1200}
+        onCancel={(e) => setRegisModal(false)}
+      >
+        <Form
+          {...layout}
+          name="basic"
+          size="large"
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+        >
+          <Form.Item
+            name="nama"
+            label="Nama"
+            rules={[
+              {
+                required: true,
+                message: "Isikan nama anda!",
+              },
+            ]}
+          >
+            <Input size="large" />
+          </Form.Item>
+          <Form.Item
+            name="email"
+            label="E-mail"
+            rules={[
+              {
+                type: "email",
+                message: "Format Email tidak sesuai!",
+              },
+              {
+                required: true,
+                message: "Tolong isikan Email!",
+              },
+            ]}
+          >
+            <Input size="large" />
+          </Form.Item>
+
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[{ required: true, message: "Tolong isikan password!" }]}
+          >
+            <Input.Password />
+          </Form.Item>
+          <Form.Item name="date-picker" label="DatePicker" {...config}>
+            <DatePicker size="large" />
+          </Form.Item>
+          {/* <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+            </Form.Item> */}
+
+          <Form.Item {...tailLayout}>
+            <Button type="primary" htmlType="submit">
+              <span style={{ color: "#fff" }}>Daftar</span>
+            </Button>
+          </Form.Item>
+        </Form>
+      </Modal>
       <div id="myModal" className="modal">
         <div className="modal-content">
-          <span className="close" onClick={() => ShowModal(!modal)}>
+          <span className="close" onClick={() => setRegisModal(!regisModal)}>
             &times;
           </span>
           <p>Some text in the Modal..</p>
@@ -15,38 +103,46 @@ const Daftar = () => {
       </div>
       <section className="daftar">
         <div className="left-text">
-          <h1>Daftar Komunitas Berkat Aksi Damai</h1>
-          Bergabunglah Bersama kami untuk meningkatkan jiwa sosial kita dengan
-          menanam rasa peduli, tulus, rela serta berhati mulia berbagi berkah
-          kesesama yang lemah dan orang yang hidupnya masih memiliki kekurangan
+          <h1>Ayo Buruan Gabung Dengan Kami</h1>
         </div>
         <div className="right-text">
-          <a onClick={() => ShowModal(!modal)}>
+          <a onClick={() => setRegisModal(!modal)}>
             <img src="/asset/Subscribe.png" />
           </a>
         </div>
       </section>
-
+      <style jsx>
+        {`
+          @media (max-width: 992px) {
+            .left-text h1 {
+              font-weight: 500;
+              font-size: 34px !important;
+              margin: 0;
+            }
+            .right-text img {
+              width: 200px !important;
+              transition: 0.6s;
+            }
+          }
+        `}
+      </style>
       <style jsx>{`
         .daftar {
           position: relative;
           width: 100%;
-          min-height: 60vh;
           display: flex;
+          margin-top: 5vw;
+          align-content: center;
+          flex-direction: column;
           align-items: center;
-          padding-left: 11.6vw;
-          padding-right: 11.6vw;
         }
         .left-text {
-          width: 70%;
           font-size: 1.4vw;
         }
         .left-text h1 {
           font-weight: 500;
           font-size: 3vw;
-        }
-        .right-text {
-          padding: 2.4vw;
+          margin: 0;
         }
         .right-text img {
           width: 20vw;

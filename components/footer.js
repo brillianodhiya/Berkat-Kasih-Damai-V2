@@ -3,9 +3,78 @@ import { useState, useEffect } from "react";
 const Footer = () => {
   return (
     <footer>
-      <img className="bg" src="/asset/footer.png" />
       <div className="container">
-        <div>
+        <div className="desc">
+          <div className="img-container">
+            <img src="/asset/BKD_fix.png" />
+          </div>
+          <div className="detail">
+            <p>
+              Komunitas yang mewadahi orang-orang yang gemar melakukan traveling
+              dan suka membantu untuk pertumbuhan pariwisata di tanah air
+            </p>
+          </div>
+        </div>
+        <div className="tentang">
+          <h1>Tentang</h1>
+          <div className="ul-container">
+            <ul>
+              <li>
+                <a href="#beranda">Beranda</a>
+              </li>{" "}
+              <li>
+                <a href="#informasi">Informasi</a>
+              </li>{" "}
+              <li>
+                <a href="#galeri">Galeri</a>
+              </li>{" "}
+              <li>
+                <a href="#program">Program</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="#destinasi">Destinasi</a>
+              </li>{" "}
+              <li>
+                <a href="#opendonasi">Open Donasi</a>
+              </li>{" "}
+              <li>
+                <a href="#syarat">Syarat & Ketentuan</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="kontak">
+          <h1>Kontak Kami</h1>
+          <div className="ul-container">
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://api.whatsapp.com/send?phone=6281296399988&text=Hi..%20Berkat%20Kasih%20Damai&source=&data=&app_absent="
+                >
+                  <img src="/asset/wa.png" /> &nbsp; 0812-9639-9988
+                </a>
+              </li>{" "}
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/berkatkasihdamai/"
+                >
+                  <img src="/asset/ig.png" /> &nbsp; berkatkasihdamai
+                </a>
+              </li>{" "}
+              <li>
+                <a target="_blank" href="berkatkasihdamai@gmail.com">
+                  <img src="/asset/email.png" /> &nbsp;
+                  berkatkasihdamai@gmail.com
+                </a>
+              </li>{" "}
+            </ul>
+          </div>
+        </div>
+        {/* <div>
           <span className="title">
             <img src="/asset/BKD_fix.png" />
             Berkat Kasih Damai
@@ -38,7 +107,7 @@ const Footer = () => {
           <a href="https://www.linkedin.com/" target="_blank">
             <img src="/asset/social-linkin.png" />
           </a>
-        </div>
+        </div> */}
       </div>
       <div className="copyright">
         <p>© Copyright Secure. All rights reserved 2020.</p>
@@ -60,8 +129,9 @@ const Footer = () => {
           footer {
             position: relative;
             width: 100%;
-            min-height: 50vh;
+            min-height: 60vh;
             display: flex;
+            background: #ffe35a;
             margin-top: 3.6vw;
           }
           footer .bg {
@@ -72,10 +142,92 @@ const Footer = () => {
           footer .container {
             display: flex;
             width: 100%;
-            padding-left: 20vw;
-            padding-right: 20vw;
-            padding-top: 8vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
             justify-content: space-between;
+          }
+          .kontak {
+            display: flex;
+            width: 30%;
+            padding-top: 0;
+            height: 70%;
+            position: relative;
+            padding-left: 4vw;
+            padding-right: 4vw;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .kontak h1 {
+            font-weight: 500;
+            font-size: 2vw;
+          }
+          .kontak .ul-container {
+            display: flex;
+            width: 100%;
+          }
+          .kontak .ul-container ul {
+            width: 100%;
+
+            list-style-type: none;
+          }
+          .ul-container ul li a {
+            color: #141640;
+          }
+          .tentang {
+            display: flex;
+            width: 40%;
+            padding-top: 0;
+            height: 70%;
+            position: relative;
+            padding-left: 4vw;
+            padding-right: 4vw;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .tentang h1 {
+            font-weight: 500;
+            font-size: 2vw;
+          }
+          .tentang .ul-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+          }
+          .tentang .ul-container ul {
+            width: 50%;
+
+            list-style-type: none;
+          }
+          .ul-container ul li a {
+            color: #141640;
+          }
+          .desc {
+            display: flex;
+            width: 30%;
+            padding-top: 0;
+            height: 70%;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+          .desc .img-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
+          .img-container img {
+            width: 30%;
+          }
+          .desc .detail {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
+          .desc .detail p {
+            width: 100%;
+            font-size: 1.1vw;
+            text-align: center;
           }
           .title {
             display: flex;
@@ -132,8 +284,47 @@ const Footer = () => {
           }
           .copyright {
             position: absolute;
-            bottom: 16px;
-            margin-left: 20vw;
+            bottom: 0;
+            height: 4.5vw;
+            width: 100%;
+            background: #2f2f2f;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .copyright p {
+            color: #fff;
+            font-size: 1.2vw;
+          }
+          @media (max-width: 992px) {
+            .copyright p {
+              color: #fff;
+              font-size: 100%;
+            }
+            .copyright {
+              height: 40px;
+            }
+            footer .container {
+              display: flex;
+              width: 100%;
+              padding-left: 5vw;
+              padding-right: 5vw;
+              flex-direction: column;
+            }
+            .kontak {
+              margin-bottom: 40px;
+            }
+            footer .container div {
+              width: 100%;
+            }
+            h1 {
+              font-weight: 500;
+              font-size: 34px !important;
+            }
+            p {
+              font-size: 100% !important;
+            }
           }
         `}
       </style>
