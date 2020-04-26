@@ -27,6 +27,7 @@ const Home = () => (
 
         .ant-modal {
           width: 50vw !important;
+          height: 30vw !important;
         }
         .list-gallery .ant-list-item-main {
           order: 2 !important;
