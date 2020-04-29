@@ -126,6 +126,18 @@ const Footer = () => {
       </a> */}
       <style jsx>
         {`
+          @media (max-width: 992px) {
+            a {
+              font-size: 100% !important;
+            }
+          }
+        `}
+      </style>
+      <style jsx>
+        {`
+          a {
+            font-size: 1.1vw;
+          }
           footer {
             position: relative;
             width: 100%;

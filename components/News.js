@@ -92,7 +92,7 @@ const News = () => {
                         </a>
                       }
                       description={
-                        <p>
+                        <p className="desc-gallery">
                           {item.desc} <br /> # {item.tag}
                         </p>
                       }
@@ -114,7 +114,7 @@ const News = () => {
                         </a>
                       }
                       description={
-                        <p>
+                        <p className="desc-gallery">
                           {item.desc} <br /> # {item.tag}
                         </p>
                       }
@@ -152,6 +152,9 @@ const News = () => {
             h2 {
               font-size: 100% !important;
             }
+            .desc-gallery {
+              font-size: 100% !important;
+            }
           }
         `}
       </style>
@@ -161,7 +164,7 @@ const News = () => {
             width: 20vw;
           }
           h2 {
-            font-size: 1.2vw;
+            font-size: 3vw;
           }
           .content-galery {
             padding-left: 11%;
@@ -201,6 +204,9 @@ const News = () => {
             align-items: center;
           }
 
+          .desc-gallery {
+            font-size: 1.4vw;
+          }
           .container {
             width: 100%;
             display: flex;
