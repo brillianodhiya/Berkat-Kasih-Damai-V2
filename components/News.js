@@ -154,6 +154,7 @@ const News = () => {
             }
             .desc-gallery {
               font-size: 100% !important;
+              line-height: 100% !important;
             }
           }
         `}
