@@ -206,6 +206,7 @@ const News = () => {
 
           .desc-gallery {
             font-size: 1.4vw;
+            line-height: 1.8vw;
           }
           .container {
             width: 100%;
