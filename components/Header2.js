@@ -117,22 +117,22 @@ const Header = () => {
             <a href="#home">Home</a>
           </li> */}
           <li>
-            <a href="#beranda" onClick={() => setActive(false)}>
+            <a href="/#beranda" onClick={() => setActive(false)}>
               Beranda
             </a>
           </li>
           <li>
-            <a href="#informasi" onClick={() => setActive(false)}>
+            <a href="/#informasi" onClick={() => setActive(false)}>
               Informasi
             </a>
           </li>
           <li>
-            <a href="#galeri" onClick={() => setActive(false)}>
+            <a href="/#galeri" onClick={() => setActive(false)}>
               Galeri
             </a>
           </li>
           <li>
-            <a href="#testimoni" onClick={() => setActive(false)}>
+            <a href="/#testimoni" onClick={() => setActive(false)}>
               Testimoni
             </a>
           </li>

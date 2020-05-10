@@ -20,16 +20,16 @@ const Footer = () => {
           <div className="ul-container">
             <ul>
               <li>
-                <a href="#beranda">Beranda</a>
+                <a href="/#beranda">Beranda</a>
               </li>{" "}
               <li>
-                <a href="#informasi">Informasi</a>
+                <a href="/#informasi">Informasi</a>
               </li>{" "}
               <li>
-                <a href="#galeri">Galeri</a>
+                <a href="/#galeri">Galeri</a>
               </li>{" "}
               <li>
-                <a href="#program">Program</a>
+                <a href="/#program">Program</a>
               </li>
             </ul>
             <ul>
@@ -37,7 +37,7 @@ const Footer = () => {
                 <a href="#destinasi">Destinasi</a>
               </li>{" "}
               <li>
-                <a href="#informasi">Open Donasi</a>
+                <a href="/#informasi">Open Donasi</a>
               </li>{" "}
               <li>
                 <a href="#syarat">Syarat & Ketentuan</a>
@@ -144,7 +144,6 @@ const Footer = () => {
             min-height: 60vh;
             display: flex;
             background: #ffe35a;
-            margin-top: 3.6vw;
           }
           footer .bg {
             width: 100%;

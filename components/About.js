@@ -61,7 +61,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="sec3" style={{ background: "#F9F9F9" }}>
+      <section id="program" className="sec3" style={{ background: "#F9F9F9" }}>
         <div className="content3">
           <div className="content3_1">
             <span>
@@ -85,7 +85,7 @@ const About = () => {
                 bonus yang menguntungkan
               </p>
               <br />
-              <a className="open-donasi2" href="#">
+              <a className="open-donasi2" href="/syarat-ketentuan">
                 <span>
                   <p>Syarat & Ketentuan</p>
                   <img className="open-button" src="/asset/Rectangle_550.png" />

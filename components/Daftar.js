@@ -95,7 +95,10 @@ const Daftar = () => {
       </Modal>
       <div id="myModal" className="modal">
         <div className="modal-content">
-          <span className="close" onClick={() => setRegisModal(!regisModal)}>
+          <span
+            className="close"
+            onClick={() => window.location.replace("/daftar")}
+          >
             &times;
           </span>
           <p>Some text in the Modal..</p>
@@ -106,7 +109,7 @@ const Daftar = () => {
           <h1>Ayo Buruan Gabung Dengan Kami</h1>
         </div>
         <div className="right-text">
-          <a onClick={() => setRegisModal(!modal)}>
+          <a onClick={() => window.location.replace("/daftar")}>
             <img src="/asset/Subscribe.png" />
           </a>
         </div>

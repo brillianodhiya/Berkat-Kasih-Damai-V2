@@ -122,7 +122,7 @@ const Banner = () => {
             Berkat Kasih Damai
           </h1>
           <p style={{ color: "#B1EA8C" }}>#Give Your Love With The World</p>
-          <a className="daftar" onClick={() => setRegisModal(true)}>
+          <a className="daftar" href="/daftar">
             <img className="daftarbutton" src="/asset/btn.png" />
           </a>
         </div>
