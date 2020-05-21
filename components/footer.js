@@ -229,6 +229,7 @@ const Footer = () => {
             width: 100%;
           }
           .img-container img {
+            position: relative;
             width: 30%;
           }
           .desc .detail {
