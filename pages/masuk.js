@@ -1,6 +1,7 @@
 import * as React from "react";
 import stylesheet from "antd/dist/antd.min.css";
 import { Form, Input } from "antd";
+import Head from "next/head";
 
 const Daftar = () => {
   const [form] = Form.useForm();
@@ -21,6 +22,15 @@ const Daftar = () => {
         position: "relative",
       }}
     >
+      <Head>
+        <title>Berkat Kasih Damai</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+          charSet="UTF-8"
+        ></meta>
+        <link rel="icon" href="/asset/BKD_fix.png" />
+      </Head>
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700,800,900&display=swap");
@@ -52,6 +62,13 @@ const Daftar = () => {
           position: absolute;
           top: 5vh;
           right: 5vh;
+          width: 7vw;
+        }
+        .link-logo {
+          position: absolute;
+          z-index: 1000;
+          top: 1vh;
+          right: 1vw;
           width: 7vw;
         }
         .container-login {
@@ -108,11 +125,11 @@ const Daftar = () => {
         }
         input[type="text"] {
           position: relative;
-          font-size: 1.5vw;
+          font-size: 1.2vw;
           width: 100%;
           color: #fff;
           background: none;
-          padding: 1.2vh 2vw;
+          padding: 1.2vh 1vw;
           margin: 0.2vh 0;
           box-sizing: border-box;
           border: none;
@@ -120,14 +137,16 @@ const Daftar = () => {
           transition: 0.6s;
         }
         input[type="text"]:focus {
+          border: none !important;
+          border-bottom: 2px solid #fff !important;
         }
         input[type="password"] {
           position: relative;
-          font-size: 1.5vw;
+          font-size: 1.2vw;
           width: 100%;
           color: #fff;
           background: none;
-          padding: 1.2vh 2vw;
+          padding: 1.2vh 1vw;
           margin: 0.2vh 0;
           box-sizing: border-box;
           border: none;
@@ -147,14 +166,120 @@ const Daftar = () => {
         .not-have p {
           color: #fff;
           text-align: center;
-          font-size: 1.4vw;
+          font-size: 1.2vw;
         }
         .not-have p a {
           color: #fff;
           text-decoration: underline;
         }
+        .button-img {
+          position: relative;
+          width: 35vw;
+        }
+        @media (max-width: 768px) {
+          .motoran {
+            display: none;
+          }
+          .container-login {
+            min-height: 90vh;
+            width: 100%;
+            left: 0;
+            // background: #fff;
+            top: 5vh;
+            position: absolute;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
+          }
+          .title-text {
+            font-size: 150%;
+            color: #fff;
+          }
+          .subtittle-text {
+            text-align: center;
+            color: #fff;
+            font-weight: 300;
+            font-size: 100%;
+          }
+          .form {
+            margin-top: 5%;
+          }
+          label {
+            font-size: 100%;
+            color: #fff;
+            font-weight: 300;
+          }
+          .icon-text img {
+            width: 60%;
+          }
+
+          input[type="text"] {
+            position: relative;
+            font-size: 100%;
+            width: 100%;
+            color: #fff;
+            background: none;
+            padding: 1.2vh 1vw;
+            margin: 0.2vh 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid #fff;
+            transition: 0.6s;
+          }
+          input[type="text"]:focus {
+            border: none !important;
+            border-bottom: 2px solid #fff !important;
+          }
+          input[type="password"] {
+            position: relative;
+            font-size: 100%;
+            width: 100%;
+            color: #fff;
+            background: none;
+            padding: 1.2vh 1vw;
+            margin: 0.2vh 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid #fff;
+            transition: 0.6s;
+          }
+          input[type="password"]::after {
+          }
+          .button-masuk {
+            width: 100%;
+            display: flex;
+            margin-top: 4vh;
+          }
+          .not-have {
+            margin-top: 4vh;
+          }
+          .not-have p {
+            color: #fff;
+            text-align: center;
+            font-size: 100%;
+          }
+          .button-img {
+            position: relative;
+            width: 100%;
+          }
+          .logo-bkd {
+            position: absolute;
+            top: 5vh;
+            right: 5vh;
+            width: 100%;
+          }
+          .link-logo {
+            position: absolute;
+            z-index: 1000;
+            width: 15%;
+          }
+        }
       `}</style>
-      <img className="logo-bkd" src="/asset/daftar/BKD.png" />
+
+      <a href="/" className="link-logo">
+        <img className="logo-bkd" src="/asset/BKD_fix.png" />
+      </a>
       <img className="path1" src="/asset/daftar/Path -1.png" />
       <img className="path2" src="/asset/daftar/Path -2.png" />
       <img className="motoran" src="/asset/daftar/Group 1167.png" />
@@ -190,12 +315,15 @@ const Daftar = () => {
               />
             </div>
             <div className="label-text">
-              <label for="email">Email</label>
+              <label>Email</label>
             </div>
           </div>
           <input
             type="text"
             id="email"
+            autoComplete={false}
+            autoCorrect={false}
+            autoFocus={false}
             name="email"
             placeholder="Masukkan Email"
           />
@@ -214,10 +342,10 @@ const Daftar = () => {
               />
             </div>
             <div className="label-text">
-              <label for="Password">Password</label>
+              <label>Password</label>
             </div>
           </div>
-          <img
+          {/* <img
             src="/asset/daftar/Icon feather-eye.png"
             style={{
               float: "right",
@@ -228,8 +356,11 @@ const Daftar = () => {
               marginTop: "1vh",
               pointerEvents: "initial",
             }}
-          />
+          /> */}
           <input
+            autoComplete={false}
+            autoCorrect={false}
+            autoFocus={false}
             type="password"
             id="Password"
             name="Password"
@@ -239,10 +370,7 @@ const Daftar = () => {
         <div className="button-masuk">
           <div>
             <a href="#">
-              <img
-                style={{ position: "relative", width: "35vw" }}
-                src="/asset/daftar/Group -1.png"
-              />
+              <img className="button-img" src="/asset/daftar/Group -1.png" />
             </a>
           </div>
         </div>

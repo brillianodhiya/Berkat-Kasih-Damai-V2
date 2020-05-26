@@ -103,7 +103,10 @@ const About = () => {
       <style jsx>
         {`
           @media (max-width: 992px) {
-            img-destination {
+            .img-destination {
+              display: none !important;
+            }
+            .img-destination-bg {
               display: none !important;
             }
             .hiro-banner {
