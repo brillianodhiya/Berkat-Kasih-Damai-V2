@@ -231,6 +231,7 @@ const Footer = () => {
           .img-container img {
             position: relative;
             width: 30%;
+            height: 100%;
           }
           .desc .detail {
             display: flex;

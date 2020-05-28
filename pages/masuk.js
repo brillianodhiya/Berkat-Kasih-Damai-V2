@@ -54,8 +54,8 @@ const Daftar = () => {
         }
         .motoran {
           position: absolute;
-          width: 25vw;
-          right: 10vw;
+          width: 36vw;
+          right: 8vw;
           bottom: 20vh;
         }
         .logo-bkd {
@@ -282,7 +282,10 @@ const Daftar = () => {
       </a>
       <img className="path1" src="/asset/daftar/Path -1.png" />
       <img className="path2" src="/asset/daftar/Path -2.png" />
-      <img className="motoran" src="/asset/daftar/Group 1167.png" />
+      <img
+        className="motoran"
+        src="/asset/daftar/undraw_fingerprint_swrc.png"
+      />
       <div className="container-login">
         <div
           style={{
@@ -322,7 +325,6 @@ const Daftar = () => {
             type="text"
             id="email"
             autoComplete={false}
-            autoCorrect={false}
             autoFocus={false}
             name="email"
             placeholder="Masukkan Email"
@@ -359,7 +361,6 @@ const Daftar = () => {
           /> */}
           <input
             autoComplete={false}
-            autoCorrect={false}
             autoFocus={false}
             type="password"
             id="Password"
