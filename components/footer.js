@@ -130,6 +130,9 @@ const Footer = () => {
             a {
               font-size: 100% !important;
             }
+            .img-container img {
+              position: relative;
+            }
           }
         `}
       </style>
